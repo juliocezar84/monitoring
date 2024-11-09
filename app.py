@@ -84,7 +84,7 @@ def veiculo_por_placa(placa):
             conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
             if request.method == 'GET':
-                cursor.execute('''SELECT renavam, placa, marca, modelo WHERE placa=?''', [placa])
+                cursor.execute('''SELECT renavam, placa, marca, modelo FROM veiculos WHERE placa=?''', [placa])
                 result = cursor.fetchall()
                 if result:
                     log_message('info', '/veiculo/<placa> GET - Veículo encontrado')
