@@ -9,7 +9,7 @@ cursor = conn.cursor()
 # Comando SQL para criar uma tabela chamada 'veiculos'
 create_table_query = """
 CREATE TABLE IF NOT EXISTS veiculos (
-    renavan TEXT,
+    renavam TEXT,
     placa TEXT,
     marca TEXT,
     modelo TEXT
